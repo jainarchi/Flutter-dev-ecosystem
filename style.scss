@@ -100,18 +100,19 @@ main {
       }
 
       .textCont {
+         @include m.flex-col(1.5rem);
+
         h4 {
           font-size: 1.2rem;
           color: rgb(90, 88, 88);
         }
         h1 {
           font-size: 3rem;
-          margin: 1rem 0;
         }
+
         #btm {
           @include m.flex-col(1rem);
-          margin: 1rem 0;
-          
+
           button{
             border-radius: 2rem;
             border: 0.05rem solid rgb(93, 93, 249) ;
