@@ -84,7 +84,7 @@ main {
   }
 
   
-  #view3 {
+  #view3 , #view4 {
     width: 100%;
 
     .box {
@@ -98,24 +98,30 @@ main {
           width: 100%;
         }
       }
+     }
 
       .textCont {
-         @include m.flex-col(1.5rem);
+         @include m.flex-col(1.2rem);
 
         h4 {
           font-size: 1.2rem;
           color: rgb(90, 88, 88);
         }
         h1 {
-          font-size: 3rem;
+          font-size: 2.7rem;
         }
 
-        #btm {
+        .btm {
           @include m.flex-col(1rem);
 
-          button{
+          h5 {
+            margin-left: 1.5rem;
+          }
+        }
+
+         button{
             border-radius: 2rem;
-            border: 0.05rem solid rgb(93, 93, 249) ;
+            border: 0.05rem solid rgb(83, 83, 249) ;
             background: transparent ;
             color: rgb(83, 83, 249);
             padding: 0.7rem 2rem;
@@ -123,11 +129,21 @@ main {
             font-weight: 600;
           }
 
-          h5 {
-            margin-left: 1.5rem;
+          #bluebtn{
+            background: rgb(83, 83, 249);
+            color: white;
           }
-        }
       }
+    
+    .boxbg{
+      background: linear-gradient(whitesmoke , rgb(252, 252, 208));
     }
+
   }
+  
+
+  
+
+
+
 }
