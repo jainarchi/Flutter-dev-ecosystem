@@ -1,0 +1,132 @@
+@use "_function" as m;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  nav {
+    width: 100%;
+    @include m.flex-row(space-between);
+    padding: 2rem;
+
+    img {
+      background: #000;
+    }
+  }
+
+  #view1 {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(rgb(210, 238, 253), white, rgb(250, 218, 224));
+
+    .top {
+      width: 100%;
+      @include m.flex-col(0rem);
+
+      .imgCont {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .textCont {
+        width: 100%;
+        h1 {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    p {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 5rem 0;
+      color: black;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: rgb(79, 79, 79);
+  }
+
+  #view2 {
+    width: 100%;
+    padding: 4rem 2rem;
+    background: rgb(232, 255, 255);
+
+    .box {
+      padding: 2rem 0;
+      border-top: 0.2rem solid rgb(203, 203, 203);
+      @include m.flex-col(1.5rem);
+      // background: lightcyan;
+
+      h3 {
+        font-size: 1.4rem;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  
+  #view3 {
+    width: 100%;
+
+    .box {
+      width: 100%;
+      padding: 2rem;
+
+      .imgCont {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .textCont {
+        h4 {
+          font-size: 1.2rem;
+          color: rgb(90, 88, 88);
+        }
+        h1 {
+          font-size: 3rem;
+          margin: 1rem 0;
+        }
+        #btm {
+          @include m.flex-col(1rem);
+          margin: 1rem 0;
+          
+          button{
+            border-radius: 2rem;
+            border: 0.05rem solid rgb(93, 93, 249) ;
+            background: transparent ;
+            color: rgb(83, 83, 249);
+            padding: 0.7rem 2rem;
+            width: fit-content;
+            font-weight: 600;
+          }
+
+          h5 {
+            margin-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
