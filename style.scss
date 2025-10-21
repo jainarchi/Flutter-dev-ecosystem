@@ -14,8 +14,9 @@ body {
 }
 
 main {
-  .logoCont {
-    width: 100%;
+ 
+  i{
+    font-size: 1.3rem;
   }
 
   nav {
@@ -121,6 +122,9 @@ main {
         h5 {
           margin-left: 1.5rem;
         }
+        i{
+          font-size: 1rem;
+        }
       }
 
       button {
@@ -184,12 +188,10 @@ main {
   footer {
     width: 100%;
     padding: 1rem 3rem;
-    // background: lightblue;
+   
 
     #footer-top {
-      // background: lightgoldenrodyellow;
       @include m.flex-col(2rem);
-      padding-bottom: 2rem;
 
       #gridCont {
         display: grid;
@@ -201,27 +203,29 @@ main {
           font-weight: 600;
         }
         li {
-          font-size: 1.1rem;
+          font-size: 1rem;
           margin: 0.8rem 0;
+          color: rgb(65, 63, 63);
         }
       }
     }
 
     #footer-btm {
       text-align: center;
+      padding: 2rem 0;
 
       ul {
         @include m.flex-row(center);
         gap: 1rem;
         padding: 2rem 0;
+       
       }
 
       #footer-btm-btm {
         padding: 2rem 0;
         border-top: 0.1rem solid rgb(191, 191, 191);
         @include m.flex-col(0rem);
-
-        p {
+        li , p{
           font-size: 0.9rem;
         }
       }
@@ -231,4 +235,41 @@ main {
       list-style: none;
     }
   }
+}
+
+
+@media (min-width : 768px) {
+  main{
+
+  
+  footer{
+      #footer-top{
+       flex-direction: row ;
+       justify-content: space-between;        
+        
+
+       .logoCont{
+        width: 45%;
+       }
+        #gridCont{
+          grid-template-columns: 1fr 1fr 1fr ;
+          width: 55%;
+        }
+      }
+
+      #footer-btm{
+        text-align: start;
+
+        ul{
+          justify-content: start
+        }
+
+        #footer-btm-btm{
+          @include m.flex-row(space-between);
+          gap: 14rem;
+        }
+      }
+  }
+
+ }
 }
