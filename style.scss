@@ -13,11 +13,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
 main {
- 
+
   i{
     font-size: 1.3rem;
   }
+
+
+  section {
+    .content{
+    max-width:  1920px;
+    display: block;
+    margin: auto;
+    // border: 2px solid red;
+  }
+}
 
   nav {
     width: 100%;
@@ -41,15 +52,15 @@ main {
 
       .imgCont {
         width: 100%;
-        img {
-          width: 100%;
-        }
       }
 
       .textCont {
         width: 100%;
+        
         h1 {
-          font-size: 2.5rem;
+          font-size: clamp(2.5rem , 4.5vw , 4rem);
+          max-width: 450px;
+          margin: auto;
         }
       }
     }
@@ -63,29 +74,34 @@ main {
   }
 
   p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     color: rgb(79, 79, 79);
   }
 
   #view2 {
     width: 100%;
-    padding: 4rem 2rem;
-    background: rgb(232, 255, 255);
-
+    padding: 4rem 2rem 0rem 2rem;
+    
+    
     .box {
       padding: 2rem 0;
-      border-top: 0.2rem solid rgb(203, 203, 203);
+      border-top: 0.2rem solid rgb(227, 227, 227);
       @include m.flex-col(1.5rem);
-      // background: lightcyan;
+    
 
       h3 {
         font-size: 1.4rem;
       }
-      img {
-        width: 100%;
-      }
+     
     }
+  }
+
+  #view1 , #view2 , #view3{
+   img {
+          width: 100%;
+          max-width: 600px;
+        }
   }
 
   #view3,
@@ -94,33 +110,32 @@ main {
 
     .box {
       width: 100%;
-      padding: 2rem;
+      padding: 2rem ;
 
       .imgCont {
         width: 100%;
 
-        img {
-          width: 100%;
-        }
       }
     }
 
     .textCont {
-      @include m.flex-col(1.2rem);
+      @include m.flex-col(1.4rem);
+      padding-right: 2vw ;
+     
 
       h4 {
         font-size: 1.2rem;
         color: rgb(90, 88, 88);
       }
       h1 {
-        font-size: 2.7rem;
+        font-size: clamp(2.5rem , 3.5vw , 3.5rem)
       }
 
       .btm {
-        @include m.flex-col(1rem);
+        @include m.flex-col(1.2rem);
 
         h5 {
-          margin-left: 1.5rem;
+          margin-left: 1.2rem;
         }
         i{
           font-size: 1rem;
@@ -147,6 +162,8 @@ main {
       background: linear-gradient(whitesmoke, rgb(252, 252, 208));
     }
   }
+
+
 
   #view4 {
     padding: 5rem 2rem;
@@ -175,7 +192,7 @@ main {
       }
 
       p {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         color: white;
       }
 
@@ -187,7 +204,8 @@ main {
 
   footer {
     width: 100%;
-    padding: 1rem 3rem;
+    padding: 3rem;
+    background: whitesmoke;
    
 
     #footer-top {
@@ -222,7 +240,7 @@ main {
       }
 
       #footer-btm-btm {
-        padding: 2rem 0;
+        padding-top: 2rem;
         border-top: 0.1rem solid rgb(191, 191, 191);
         @include m.flex-col(0rem);
         li , p{
@@ -272,4 +290,61 @@ main {
   }
 
  }
+
+}
+
+
+@media (min-width : 1024px) {
+  main{
+    .content{
+      padding: 0rem 10rem;
+    }
+
+   #view1 .content{
+
+    .top{
+       @include m.flex-row-gap(row-reverse);
+
+       h1{
+        text-align: left;
+       }
+    }
+  }
+
+
+  #view2 .content{
+    @include m.flex-row-gap();
+  }
+
+  #view3{
+
+    .box .imgCont {
+      width: 50%;
+      text-align: center;
+    }
+
+     .box .textCont{
+        max-width: 50%
+    }
+  
+      .dir-row{
+        @include m.flex-row-gap();
+
+      }
+
+      .whitebgbox{
+        @include m.flex-row-gap(row-reverse);
+      }
+  }
+  
+  #view4{
+    #bluebox{
+      padding: 4rem;
+    }
+  }
+
+
+
+
+  } 
 }
