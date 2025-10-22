@@ -14,6 +14,9 @@ body {
 main i {
   font-size: 1.3rem;
 }
+main button:hover {
+  box-shadow: 0rem 0rem 0.4rem rgb(85, 85, 255);
+}
 main section .content {
   max-width: 1920px;
   display: block;
@@ -25,11 +28,41 @@ main nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem;
   position: sticky;
   top: 0;
   z-index: 9;
   background: white;
+}
+main nav #nav-right {
+  display: none;
+}
+main nav button {
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 0.7rem;
+  background: white;
+  color: rgb(82, 79, 79);
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+main nav button:hover {
+  background: whitesmoke;
+  color: rgb(63, 63, 254);
+}
+main nav #eco-btn {
+  color: rgb(63, 63, 254);
+}
+main nav #navlastbtn {
+  color: white;
+  background: rgb(63, 63, 254);
+  padding: 0.7rem 1.5rem;
+}
+main nav #hamburger {
+  display: block;
 }
 main #view1 {
   padding: 1rem;
@@ -79,7 +112,9 @@ main #view2 .box {
 main #view2 .box h3 {
   font-size: 1.4rem;
 }
-main #view1 img, main #view2 img, main #view3 img {
+main #view1 img,
+main #view2 img,
+main #view3 img {
   width: 100%;
   max-width: 600px;
 }
@@ -136,6 +171,7 @@ main #view4 .textCont button {
   width: -moz-fit-content;
   width: fit-content;
   font-weight: 600;
+  cursor: pointer;
 }
 main #view3 .textCont #bluebtn,
 main #view4 .textCont #bluebtn {
@@ -180,6 +216,10 @@ main #view4 #bluebox p {
 main #view4 #bluebox button {
   background: whitesmoke;
 }
+main #view4 #bluebox button:hover {
+  background: rgb(19, 19, 76);
+  color: white;
+}
 main footer {
   width: 100%;
   padding: 3rem;
@@ -223,7 +263,8 @@ main footer #footer-btm #footer-btm-btm {
   flex-direction: column;
   gap: 0rem;
 }
-main footer #footer-btm #footer-btm-btm li, main footer #footer-btm #footer-btm-btm p {
+main footer #footer-btm #footer-btm-btm li,
+main footer #footer-btm #footer-btm-btm p {
   font-size: 0.9rem;
 }
 main footer li {
@@ -259,6 +300,16 @@ main footer li {
 @media (min-width: 1024px) {
   main .content {
     padding: 0rem 10rem;
+  }
+  main nav #nav-right {
+    display: flex;
+    flex-direction: "row";
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  main nav #hamburger {
+    display: none;
   }
   main #view1 .content .top {
     display: flex;

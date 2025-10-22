@@ -13,31 +13,64 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
 main {
-
-  i{
+  i {
     font-size: 1.3rem;
   }
-
+  button:hover {
+    box-shadow: 0rem 0rem 0.4rem rgb(85, 85, 255);
+  }
 
   section {
-    .content{
-    max-width:  1920px;
-    display: block;
-    margin: auto;
-    // border: 2px solid red;
+    .content {
+      max-width: 1920px;
+      display: block;
+      margin: auto;
+    }
   }
-}
 
   nav {
     width: 100%;
     @include m.flex-row(space-between);
-    padding: 1.5rem;
+    padding: 1rem;
     position: sticky;
     top: 0;
     z-index: 9;
     background: white;
+
+    #nav-right {
+      display: none;
+    }
+
+    button {
+      list-style: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 1.5rem;
+      padding: 0.7rem;
+      background: white;
+      color: rgb(82, 79, 79);
+      transition: 0.1s linear;
+      cursor: pointer;
+    }
+    button:hover {
+      background: whitesmoke;
+      color: rgb(63, 63, 254);
+    }
+    #eco-btn {
+      color: rgb(63, 63, 254);
+    }
+
+    #navlastbtn {
+      color: white;
+      background: rgb(63, 63, 254);
+      padding: 0.7rem 1.5rem;
+    }
+
+    #hamburger {
+      display: block;
+    }
   }
 
   #view1 {
@@ -56,9 +89,9 @@ main {
 
       .textCont {
         width: 100%;
-        
+
         h1 {
-          font-size: clamp(2.5rem , 4.5vw , 4rem);
+          font-size: clamp(2.5rem, 4.5vw, 4rem);
           max-width: 450px;
           margin: auto;
         }
@@ -82,26 +115,25 @@ main {
   #view2 {
     width: 100%;
     padding: 4rem 2rem 0rem 2rem;
-    
-    
+
     .box {
       padding: 2rem 0;
       border-top: 0.2rem solid rgb(227, 227, 227);
       @include m.flex-col(1.5rem);
-    
 
       h3 {
         font-size: 1.4rem;
       }
-     
     }
   }
 
-  #view1 , #view2 , #view3{
-   img {
-          width: 100%;
-          max-width: 600px;
-        }
+  #view1,
+  #view2,
+  #view3 {
+    img {
+      width: 100%;
+      max-width: 600px;
+    }
   }
 
   #view3,
@@ -110,25 +142,23 @@ main {
 
     .box {
       width: 100%;
-      padding: 2rem ;
+      padding: 2rem;
 
       .imgCont {
         width: 100%;
-
       }
     }
 
     .textCont {
       @include m.flex-col(1.4rem);
-      padding-right: 2vw ;
-     
+      padding-right: 2vw;
 
       h4 {
         font-size: 1.2rem;
         color: rgb(90, 88, 88);
       }
       h1 {
-        font-size: clamp(2.5rem , 3.5vw , 3.5rem)
+        font-size: clamp(2.5rem, 3.5vw, 3.5rem);
       }
 
       .btm {
@@ -137,7 +167,7 @@ main {
         h5 {
           margin-left: 1.2rem;
         }
-        i{
+        i {
           font-size: 1rem;
         }
       }
@@ -150,6 +180,7 @@ main {
         padding: 0.7rem 2rem;
         width: fit-content;
         font-weight: 600;
+        cursor: pointer;
       }
 
       #bluebtn {
@@ -162,8 +193,6 @@ main {
       background: linear-gradient(whitesmoke, rgb(252, 252, 208));
     }
   }
-
-
 
   #view4 {
     padding: 5rem 2rem;
@@ -199,6 +228,10 @@ main {
       button {
         background: whitesmoke;
       }
+      button:hover {
+        background: rgb(19, 19, 76);
+        color: white;
+      }
     }
   }
 
@@ -206,7 +239,6 @@ main {
     width: 100%;
     padding: 3rem;
     background: whitesmoke;
-   
 
     #footer-top {
       @include m.flex-col(2rem);
@@ -236,14 +268,14 @@ main {
         @include m.flex-row(center);
         gap: 1rem;
         padding: 2rem 0;
-       
       }
 
       #footer-btm-btm {
         padding-top: 2rem;
         border-top: 0.1rem solid rgb(191, 191, 191);
         @include m.flex-col(0rem);
-        li , p{
+        li,
+        p {
           font-size: 0.9rem;
         }
       }
@@ -255,96 +287,91 @@ main {
   }
 }
 
+@media (min-width: 768px) {
+  main {
+    footer {
+      #footer-top {
+        flex-direction: row;
+        justify-content: space-between;
 
-@media (min-width : 768px) {
-  main{
-
-  
-  footer{
-      #footer-top{
-       flex-direction: row ;
-       justify-content: space-between;        
-        
-
-       .logoCont{
-        width: 45%;
-       }
-        #gridCont{
-          grid-template-columns: 1fr 1fr 1fr ;
+        .logoCont {
+          width: 45%;
+        }
+        #gridCont {
+          grid-template-columns: 1fr 1fr 1fr;
           width: 55%;
         }
       }
 
-      #footer-btm{
+      #footer-btm {
         text-align: start;
 
-        ul{
-          justify-content: start
+        ul {
+          justify-content: start;
         }
 
-        #footer-btm-btm{
+        #footer-btm-btm {
           @include m.flex-row(space-between);
           gap: 14rem;
         }
       }
+    }
   }
-
- }
-
 }
 
-
-@media (min-width : 1024px) {
-  main{
-    .content{
+@media (min-width: 1024px) {
+  main {
+    .content {
       padding: 0rem 10rem;
     }
 
-   #view1 .content{
-
-    .top{
-       @include m.flex-row-gap(row-reverse);
-
-       h1{
-        text-align: left;
-       }
-    }
-  }
-
-
-  #view2 .content{
-    @include m.flex-row-gap();
-  }
-
-  #view3{
-
-    .box .imgCont {
-      width: 50%;
-      text-align: center;
-    }
-
-     .box .textCont{
-        max-width: 50%
-    }
-  
-      .dir-row{
-        @include m.flex-row-gap();
-
+    nav {
+      #nav-right {
+        @include m.flex-row-gap("row", 1rem);
       }
 
-      .whitebgbox{
+      #hamburger {
+        display: none;
+      }
+    }
+
+    #view1 .content {
+      .top {
+        @include m.flex-row-gap(row-reverse);
+
+        h1 {
+          text-align: left;
+        }
+      }
+    }
+
+    #view2 .content {
+      @include m.flex-row-gap();
+    }
+
+    #view3 {
+      .box .imgCont {
+        width: 50%;
+        text-align: center;
+      }
+
+      .box .textCont {
+        max-width: 50%;
+      }
+
+      .dir-row {
+        @include m.flex-row-gap();
+      }
+
+      .whitebgbox {
         @include m.flex-row-gap(row-reverse);
       }
-  }
-  
-  #view4{
-    #bluebox{
-      padding: 4rem;
+    }
+
+    #view4 {
+      #bluebox {
+        padding: 4rem;
+      }
     }
   }
-
-
-
-
-  } 
 }
