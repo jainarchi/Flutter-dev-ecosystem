@@ -246,7 +246,7 @@ main footer #footer-top #gridCont li {
 }
 main footer #footer-btm {
   text-align: center;
-  padding: 2rem 0;
+  padding-top: 2rem;
 }
 main footer #footer-btm ul {
   display: flex;
