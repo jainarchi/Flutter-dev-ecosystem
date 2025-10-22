@@ -194,17 +194,12 @@ main #view4 #bluebox {
   overflow: hidden;
 }
 main #view4 #bluebox img {
-  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
   position: absolute;
-  top: 30%;
-  left: 55%;
-  transform: rotate(11deg);
-  scale: 2.5;
+  top: 0;
+  right: 0;
 }
 main #view4 #bluebox #bluebox-textCont {
   z-index: 2;
@@ -323,9 +318,9 @@ main footer li {
   }
   main #view2 .content {
     display: flex;
-    flex-direction: row;
+    flex-direction: "";
     justify-content: center;
-    align-items: center;
+    align-items: "start";
     gap: 4rem;
   }
   main #view3 .box .imgCont {

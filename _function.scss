@@ -11,10 +11,10 @@
     align-items: center;
 }
 
-@mixin flex-row-gap( $flex-dir : row , $gap : 4rem){
+@mixin flex-row-gap( $flex-dir : row , $gap : 4rem , $align : center){
     display: flex;
     flex-direction: $flex-dir;
     justify-content: center;
-    align-items: center;
+    align-items: $align;
     gap: $gap;
 }
