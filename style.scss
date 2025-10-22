@@ -206,6 +206,7 @@ main {
 
       img {
         height: 100%;
+        width: 100%;
         object-fit: cover;
         position: absolute;
         top: 0;
@@ -285,6 +286,13 @@ main {
 
 @media (min-width: 768px) {
   main {
+    
+    #view4{
+      #bluebox img{
+        width: auto;
+      }
+    }
+
     footer {
       #footer-top {
         flex-direction: row;
